@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,8 +11,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jcvar.converter.MainActivity">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/output"
+        android:hint="0.00"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_alignBaseline="@+id/input"
+        android:layout_alignBottom="@+id/input"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical|center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="180dp"
+        android:id="@+id/input"
+        android:hint="0.00"
+        android:gravity="center_vertical|center"
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+
+        app:srcCompat="@drawable/usa_currency"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/inputImage"
+        android:scaleType="fitXY"
+        android:onClick="inputClick"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+
+        app:srcCompat="@drawable/euro_currency"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/outputImage"
+        android:scaleType="fitXY"
+        android:onClick="outputClick"
+        android:layout_alignTop="@+id/inputImage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
