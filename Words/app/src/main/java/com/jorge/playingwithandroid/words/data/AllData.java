@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 public class AllData {
-    public User mainUser;
+       public User mainUser;
     public ArrayList<Info> infoArray;
 
     private static AllData data;
